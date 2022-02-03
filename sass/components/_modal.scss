@@ -35,9 +35,11 @@
   transition: transform;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-function);
+
   @media screen and (min-width: 480px) {
     width: 450px;
   }
+
   @media screen and (min-width: 1200px) {
     width: 528px;
   }
@@ -45,6 +47,9 @@
 
 .close-btn {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 8px;
   right: 8px;
   width: 30px;

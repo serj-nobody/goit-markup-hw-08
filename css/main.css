@@ -38,6 +38,7 @@ body {
   letter-spacing: 0.03em;
   background-color: var(--white-color);
   color: var(--primary-text-color);
+  overflow-x: hidden;
 }
 
 h1,
@@ -910,6 +911,9 @@ ul {
 
 .close-btn {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 8px;
   right: 8px;
   width: 30px;
