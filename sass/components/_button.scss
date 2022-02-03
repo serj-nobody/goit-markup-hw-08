@@ -1,0 +1,22 @@
+.button {
+  min-width: 200px;
+  height: 50px;
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--white-text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn-color);
+  }
+}
