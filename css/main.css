@@ -38,7 +38,6 @@ body {
   letter-spacing: 0.03em;
   background-color: var(--white-color);
   color: var(--primary-text-color);
-  overflow-x: hidden;
 }
 
 h1,
@@ -169,9 +168,16 @@ ul {
 }
 
 .header {
-  padding: 24px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #ececec;
   position: relative;
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .header__container {
@@ -188,18 +194,37 @@ ul {
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   color: var(--accent-color);
-  margin-right: 93px;
 }
 
 .logo--alt {
   color: var(--black-text-color);
 }
 
+@media (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+    margin-right: 93px;
+  }
+}
+
 .header__nav-list {
-  display: flex;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header__nav-list {
+    display: flex;
+  }
 }
 
 .header__nav-item {
@@ -237,11 +262,31 @@ ul {
 }
 
 .header-contacts {
-  display: flex;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-contacts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-contacts {
+    flex-direction: row;
+  }
 }
 
 .header-contacts__item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+  .header-contacts__item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
 }
 
 .header-contacts__link {
@@ -264,6 +309,33 @@ ul {
 .header-contacts__icon {
   fill: currentColor;
   margin-right: 10px;
+}
+
+.burger-menu-btn {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
+}
+
+.burger-menu-btn:hover .burger-menu-btn__icon,
+.burger-menu-btn:focus .burger-menu-btn__icon {
+  fill: var(--accent-color);
+}
+
+@media (min-width: 768px) {
+  .burger-menu-btn {
+    display: none;
+  }
+}
+
+.burger-menu-btn__icon {
+  fill: currentColor;
+  transition: fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
 }
 
 .hero {
@@ -335,7 +407,7 @@ ul {
 
 @media (min-width: 768px) {
   .features__features-list {
-    margin-right: -30px;
+    margin-left: -30px;
   }
 }
 
@@ -359,7 +431,7 @@ ul {
 @media (min-width: 768px) {
   .features-list__item {
     flex-basis: calc(100% / 2 - 30px);
-    margin-right: 30px;
+    margin-left: 30px;
   }
 }
 
@@ -441,7 +513,7 @@ ul {
 
 @media screen and (min-width: 768px) {
   .team__card-set {
-    margin-right: -30px;
+    margin-left: -30px;
   }
 }
 
@@ -468,7 +540,7 @@ ul {
 @media screen and (min-width: 768px) {
   .card-set__item {
     flex-basis: calc(100% / 2 - 30px);
-    margin-right: 30px;
+    margin-left: 30px;
   }
 }
 
@@ -516,12 +588,12 @@ ul {
 .clients__list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+  margin-left: -30px;
   margin-bottom: -30px;
 }
 
 .clients__item {
-  margin-right: 30px;
+  margin-left: 30px;
   margin-bottom: 30px;
   flex-basis: calc(100% / 2 - 30px);
 }
@@ -560,6 +632,7 @@ ul {
 
 .clients__logo {
   fill: currentColor;
+  overflow: hidden;
 }
 
 .footer {

@@ -1,7 +1,11 @@
 .header {
-  padding: 24px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #ececec;
   position: relative;
+  @media (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .header__container {
@@ -18,17 +22,27 @@
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   color: var(--accent-color);
-  margin-right: 93px;
   &--alt {
     color: var(--black-text-color);
+  }
+  @media (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+    margin-right: 93px;
   }
 }
 
 .header__nav-list {
-  display: flex;
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .header__nav-item {
@@ -64,11 +78,22 @@
 }
 
 .header-contacts {
-  display: flex;
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .header-contacts__item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 10px;
+  @media (min-width: 1200px) {
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
 }
 
 .header-contacts__link {
@@ -91,4 +116,27 @@
 .header-contacts__icon {
   fill: currentColor;
   margin-right: 10px;
+}
+
+.burger-menu-btn {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
+  &:hover .burger-menu-btn__icon,
+  &:focus .burger-menu-btn__icon {
+    fill: var(--accent-color);
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.burger-menu-btn__icon {
+  fill: currentColor;
+  transition: fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
 }
