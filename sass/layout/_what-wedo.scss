@@ -6,11 +6,11 @@
 
 .what-wedo__list {
   display: flex;
-  margin-right: -30px;
+  margin-left: -30px;
 }
 
 .what-wedo__item {
-  flex-basis: calc(100 / 3 - 30px);
+  flex-basis: calc(100% / 3 - 30px);
   margin-right: 30px;
   position: relative;
 }

@@ -17,6 +17,32 @@
 <!-- HEADER -->
 
    <header class="header">
+      <div class="mobile-menu is-hidden" data-menu>
+         <button type="button" class="menu-btn menu-btn--close" aria-label="закрыть основное меню" data-menu-close>
+            <svg class="menu-btn__icon" width="40" height="40">
+               <use href="./images/icons.svg#menu-close"></use>
+            </svg>
+         </button>
+         <ul class="mobile-menu__list list">
+            <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link link">Студия</a></li>
+            <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link link">Портфолио</a></li>
+            <li class="mobile-menu__item"><a href="#footer" class="mobile-menu__link link">Контакты</a></li>
+         </ul>
+         <div class="mobile-menu__container">
+            <a href="tel:+380961111111" class="mobile-menu__tel link">+38 096 111 11 11</a>
+            <a href="mailto:info@devstudio.com" class="mobile-menu__mail link">info@devstudio.com</a>
+            <ul class="mobile-menu-socials list">
+               <li class="mobile-menu-socials__item"><a class="mobile-menu-socials__link link" href="#"
+                     target="_blank">Instagram</a></li>
+               <li class="mobile-menu-socials__item"><a class="mobile-menu-socials__link link" href="#"
+                     target="_blank">Twitter</a></li>
+               <li class="mobile-menu-socials__item"><a class="mobile-menu-socials__link link" href="#"
+                     target="_blank">Facebook</a></li>
+               <li class="mobile-menu-socials__item"><a class="mobile-menu-socials__link link" href="#"
+                     target="_blank">LinkedIn</a></li>
+            </ul>
+         </div>
+      </div>
       <div class="container header__container">
          <nav class="header__nav">
             <a class="logo link" href="./index.html">Web<span class="logo--alt">Studio</span></a>
@@ -24,7 +50,7 @@
                <li class="header__nav-item"><a href="./index.html"
                      class="header__nav-link link">Студия</a></li>
                <li class="header__nav-item"><a href="./portfolio.html" class="header__nav-link header__nav-link--current link">Портфолио</a></li>
-               <li class="header__nav-item"><a href="" class="header__nav-link link">Контакты</a></li>
+               <li class="header__nav-item"><a href="#footer" class="header__nav-link link">Контакты</a></li>
             </ul>
          </nav>
          <ul class="header-contacts list">
@@ -46,6 +72,11 @@
                </a>
             </li>
          </ul>
+         <button type="button" class="menu-btn" aria-label="открыть основное меню" data-menu-open>
+            <svg class="menu-btn__icon" width="40" height="40">
+               <use href="./images/icons.svg#burger-menu"></use>
+            </svg>
+         </button>
       </div>
    </header>
 
@@ -68,8 +99,19 @@
                <li class="company-card portfolio__company-card">
                   <a href="" class="company-card__link link">
                      <div class="company-card__overlay-container">
-                        <img src="./images/portfolio-01.jpg" class="image" alt="Технокряк" width="370" height="294">
-                        <p class="company-card__overlay">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
+                        <picture class="card-set__image">
+                           <source srcset="./images/portfolio/portfolio-01.jpg 1x, ./images/portfolio/portfolio-01@2x.jpg 2x" media="(min-width: 1200px)">
+                           <source srcset="./images/portfolio/portfolio-01-tab.jpg 1x, ./images/portfolio/portfolio-01-tab@2x.jpg 2x"
+                              media="(min-width: 768px)">
+                           <source srcset="./images/portfolio/portfolio-01-mob.jpg 1x, ./images/portfolio/portfolio-01-mob@2x.jpg 2x"
+                              media="(min-width: 480px)">
+                           <img srcset="./images/portfolio/portfolio-01-mob.jpg 1x, ./images/portfolio/portfolio-01-mob@2x.jpg 2x"
+                              src="./images/portfolio/portfolio-01-mob.jpg" alt="Технокряк" class="image">
+                        </picture>
+                        <div class="company-card__overlay">
+                           <p class="company-card__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют
+                              эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
+                        </div>
                      </div>
                      <div class="company-card__label">
                         <h2 class="company-card__title">Технокряк</h2>
@@ -80,8 +122,20 @@
                <li class="company-card portfolio__company-card">
                   <a href="" class="company-card__link link">
                      <div class="company-card__overlay-container">
-                        <img src="./images/portfolio-02.jpg" class="image" alt="Постер New Orlean vs Golden Star" width="370" height="294">
-                        <p class="company-card__overlay">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        <picture class="card-set__image">
+                           <source srcset="./images/portfolio/portfolio-02.jpg 1x, ./images/portfolio/portfolio-02@2x.jpg 2x"
+                              media="(min-width: 1200px)">
+                           <source srcset="./images/portfolio/portfolio-02-tab.jpg 1x, ./images/portfolio/portfolio-02-tab@2x.jpg 2x"
+                              media="(min-width: 768px)">
+                           <source srcset="./images/portfolio/portfolio-02-mob.jpg 1x, ./images/portfolio/portfolio-02-mob@2x.jpg 2x"
+                              media="(min-width: 480px)">
+                           <img srcset="./images/portfolio/portfolio-02-mob.jpg 1x, ./images/portfolio/portfolio-02-mob@2x.jpg 2x"
+                              src="./images/portfolio/portfolio-02-mob.jpg" alt="Постер New Orlean vs Golden Star" class="image">
+                        </picture>
+                        <div class="company-card__overlay">
+                           <p class="company-card__overlay-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit
+                              ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        </div>
                      </div>
                      <div class="company-card__label">
                         <h2 class="company-card__title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
@@ -92,8 +146,20 @@
                <li class="company-card portfolio__company-card">
                   <a href="" class="company-card__link link">
                      <div class="company-card__overlay-container">
-                        <img src="./images/portfolio-03.jpg" class="image" alt="Ресторан Seafood" width="370" height="294">
-                        <p class="company-card__overlay">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        <picture class="card-set__image">
+                           <source srcset="./images/portfolio/portfolio-03.jpg 1x, ./images/portfolio/portfolio-03@2x.jpg 2x"
+                              media="(min-width: 1200px)">
+                           <source srcset="./images/portfolio/portfolio-03-tab.jpg 1x, ./images/portfolio/portfolio-03-tab@2x.jpg 2x"
+                              media="(min-width: 768px)">
+                           <source srcset="./images/portfolio/portfolio-03-mob.jpg 1x, ./images/portfolio/portfolio-03-mob@2x.jpg 2x"
+                              media="(min-width: 480px)">
+                           <img srcset="./images/portfolio/portfolio-03-mob.jpg 1x, ./images/portfolio/portfolio-03-mob@2x.jpg 2x"
+                              src="./images/portfolio/portfolio-03-mob.jpg" alt="Ресторан Seafood" class="image">
+                        </picture>
+                        <div class="company-card__overlay">
+                           <p class="company-card__overlay-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit
+                              ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        </div>
                      </div>
                      <div class="company-card__label">
                         <h2 class="company-card__title">Ресторан <span lang="en">Seafood</span></h2>
@@ -104,8 +170,20 @@
                <li class="company-card portfolio__company-card">
                   <a href="" class="company-card__link link">
                      <div class="company-card__overlay-container">
-                        <img src="./images/portfolio-04.jpg" class="image" alt="Проект Prime" width="370" height="294">
-                        <p class="company-card__overlay">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        <picture class="card-set__image">
+                           <source srcset="./images/portfolio/portfolio-04.jpg 1x, ./images/portfolio/portfolio-04@2x.jpg 2x"
+                              media="(min-width: 1200px)">
+                           <source srcset="./images/portfolio/portfolio-04-tab.jpg 1x, ./images/portfolio/portfolio-04-tab@2x.jpg 2x"
+                              media="(min-width: 768px)">
+                           <source srcset="./images/portfolio/portfolio-04-mob.jpg 1x, ./images/portfolio/portfolio-04-mob@2x.jpg 2x"
+                              media="(min-width: 480px)">
+                           <img srcset="./images/portfolio/portfolio-04-mob.jpg 1x, ./images/portfolio/portfolio-04-mob@2x.jpg 2x"
+                              src="./images/portfolio/portfolio-04-mob.jpg" alt="Проект Prime" class="image">
+                        </picture>
+                        <div class="company-card__overlay">
+                           <p class="company-card__overlay-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit
+                              ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        </div>
                      </div>
                      <div class="company-card__label">
                         <h2 class="company-card__title">Проект <span lang="en">Prime</span></h2>
@@ -116,8 +194,20 @@
                <li class="company-card portfolio__company-card">
                   <a href="" class="company-card__link link">
                      <div class="company-card__overlay-container">
-                        <img src="./images/portfolio-05.jpg" class="image" alt="Проект Boxes" width="370" height="294">
-                        <p class="company-card__overlay">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        <picture class="card-set__image">
+                           <source srcset="./images/portfolio/portfolio-05.jpg 1x, ./images/portfolio/portfolio-05@2x.jpg 2x"
+                              media="(min-width: 1200px)">
+                           <source srcset="./images/portfolio/portfolio-05-tab.jpg 1x, ./images/portfolio/portfolio-05-tab@2x.jpg 2x"
+                              media="(min-width: 768px)">
+                           <source srcset="./images/portfolio/portfolio-05-mob.jpg 1x, ./images/portfolio/portfolio-05-mob@2x.jpg 2x"
+                              media="(min-width: 480px)">
+                           <img srcset="./images/portfolio/portfolio-05-mob.jpg 1x, ./images/portfolio/portfolio-05-mob@2x.jpg 2x"
+                              src="./images/portfolio/portfolio-05-mob.jpg" alt="Проект Boxes" class="image">
+                        </picture>
+                        <div class="company-card__overlay">
+                           <p class="company-card__overlay-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit
+                              ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        </div>
                      </div>
                      <div class="company-card__label">
                         <h2 class="company-card__title">Проект <span lang="en">Boxes</span></h2>
@@ -128,8 +218,20 @@
                <li class="company-card portfolio__company-card">
                   <a href="" class="company-card__link link">
                      <div class="company-card__overlay-container">
-                        <img src="./images/portfolio-06.jpg" class="image" alt="Inspiration has no Borders" width="370" height="294">
-                        <p class="company-card__overlay">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        <picture class="card-set__image">
+                           <source srcset="./images/portfolio/portfolio-06.jpg 1x, ./images/portfolio/portfolio-06@2x.jpg 2x"
+                              media="(min-width: 1200px)">
+                           <source srcset="./images/portfolio/portfolio-06-tab.jpg 1x, ./images/portfolio/portfolio-06-tab@2x.jpg 2x"
+                              media="(min-width: 768px)">
+                           <source srcset="./images/portfolio/portfolio-06-mob.jpg 1x, ./images/portfolio/portfolio-06-mob@2x.jpg 2x"
+                              media="(min-width: 480px)">
+                           <img srcset="./images/portfolio/portfolio-06-mob.jpg 1x, ./images/portfolio/portfolio-06-mob@2x.jpg 2x"
+                              src="./images/portfolio/portfolio-06-mob.jpg" alt="Inspiration has no Borders" class="image">
+                        </picture>
+                        <div class="company-card__overlay">
+                           <p class="company-card__overlay-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit
+                              ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        </div>
                      </div>
                      <div class="company-card__label">
                         <h2 class="company-card__title" lang="en">Inspiration has no Borders</h2>
@@ -140,8 +242,21 @@
                <li class="company-card portfolio__company-card">
                   <a href="" class="company-card__link link">
                      <div class="company-card__overlay-container">
-                        <img src="./images/portfolio-07.jpg" class="image" alt="Издание Limited Edition" width="370" height="294">
-                        <p class="company-card__overlay">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        <picture class="card-set__image">
+                           <source srcset="./images/portfolio/portfolio-07.jpg 1x, ./images/portfolio/portfolio-07@2x.jpg 2x"
+                              media="(min-width: 1200px)">
+                           <source srcset="./images/portfolio/portfolio-07-tab.jpg 1x, ./images/portfolio/portfolio-07-tab@2x.jpg 2x"
+                              media="(min-width: 768px)">
+                           <source srcset="./images/portfolio/portfolio-07-mob.jpg 1x, ./images/portfolio/portfolio-07-mob@2x.jpg 2x"
+                              media="(min-width: 480px)">
+                           <img srcset="./images/portfolio/portfolio-07-mob.jpg 1x, ./images/portfolio/portfolio-07-mob@2x.jpg 2x"
+                              src="./images/portfolio/portfolio-07-mob.jpg" alt="Издание Limited Edition" class="image">
+                        </picture>
+                        <div class="company-card__overlay">
+                           <p class="company-card__overlay-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit
+                              ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        </div>
+                        
                      </div>
                      <div class="company-card__label">
                         <h2 class="company-card__title">Издание <span lang="en">Limited Edition</span></h2>
@@ -152,8 +267,20 @@
                <li class="company-card portfolio__company-card">
                   <a href="" class="company-card__link link">
                      <div class="company-card__overlay-container">
-                        <img src="./images/portfolio-08.jpg" class="image" alt="Проект LAB" width="370" height="294">
-                        <p class="company-card__overlay">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        <picture class="card-set__image">
+                           <source srcset="./images/portfolio/portfolio-08.jpg 1x, ./images/portfolio/portfolio-08@2x.jpg 2x"
+                              media="(min-width: 1200px)">
+                           <source srcset="./images/portfolio/portfolio-08-tab.jpg 1x, ./images/portfolio/portfolio-08-tab@2x.jpg 2x"
+                              media="(min-width: 768px)">
+                           <source srcset="./images/portfolio/portfolio-08-mob.jpg 1x, ./images/portfolio/portfolio-08-mob@2x.jpg 2x"
+                              media="(min-width: 480px)">
+                           <img srcset="./images/portfolio/portfolio-08-mob.jpg 1x, ./images/portfolio/portfolio-08-mob@2x.jpg 2x"
+                              src="./images/portfolio/portfolio-08-mob.jpg" alt="Проект LAB" class="image">
+                        </picture>
+                        <div class="company-card__overlay">
+                           <p class="company-card__overlay-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate,
+                              impedit ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        </div>
                      </div>
                      <div class="company-card__label">
                         <h2 class="company-card__title">Проект <span lang="en">LAB</span></h2>
@@ -164,8 +291,20 @@
                <li class="company-card portfolio__company-card">
                   <a href="" class="company-card__link link">
                      <div class="company-card__overlay-container">
-                        <img src="./images/portfolio-09.jpg" class="image" alt="Growing Business" width="370" height="294">
-                        <p class="company-card__overlay">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        <picture class="card-set__image">
+                           <source srcset="./images/portfolio/portfolio-09.jpg 1x, ./images/portfolio/portfolio-09@2x.jpg 2x"
+                              media="(min-width: 1200px)">
+                           <source srcset="./images/portfolio/portfolio-09-tab.jpg 1x, ./images/portfolio/portfolio-09-tab@2x.jpg 2x"
+                              media="(min-width: 768px)">
+                           <source srcset="./images/portfolio/portfolio-09-mob.jpg 1x, ./images/portfolio/portfolio-09-mob@2x.jpg 2x"
+                              media="(min-width: 480px)">
+                           <img srcset="./images/portfolio/portfolio-09-mob.jpg 1x, ./images/portfolio/portfolio-09-mob@2x.jpg 2x"
+                              src="./images/portfolio/portfolio-09-mob.jpg" alt="Growing Business" class="image">
+                        </picture>
+                        <div class="company-card__overlay">
+                           <p class="company-card__overlay-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam cupiditate, impedit
+                              ullam quisquam mollitia dolorem modi harum inventore neque odio.</p>
+                        </div>
                      </div>
                      <div class="company-card__label">
                         <h2 class="company-card__title" lang="en">Growing Business</h2>
@@ -181,7 +320,7 @@
 
 <!-- FOOTER -->
 
-   <footer class="footer">
+   <footer id="footer" class="footer">
       <div class="footer__container container">
    
          <div class="footer__left">
@@ -202,30 +341,30 @@
             </div>
             <div class="socials-column">
                <p class="socials-column__title">Присоединяйтесь</p>
-               <ul class="socials list">
+               <ul class="socials socials-column__list list">
                   <li class="socials__item">
-                     <a href="#" target="_blank" class="socials__link">
+                     <a href="#" target="_blank" class="socials__link" aria-label="Instagram">
                         <svg class="socials__icon" width="20" height="20">
                            <use href="./images/icons.svg#instagram"></use>
                         </svg>
                      </a>
                   </li>
                   <li class="socials__item">
-                     <a href="#" target="_blank" class="socials__link">
+                     <a href="#" target="_blank" class="socials__link" aria-label="Twitter">
                         <svg class="socials__icon" width="20" height="20">
                            <use href="./images/icons.svg#twitter"></use>
                         </svg>
                      </a>
                   </li>
                   <li class="socials__item">
-                     <a href="#" target="_blank" class="socials__link">
+                     <a href="#" target="_blank" class="socials__link" aria-label="Facebook">
                         <svg class="socials__icon" width="20" height="20">
                            <use href="./images/icons.svg#facebook"></use>
                         </svg>
                      </a>
                   </li>
                   <li class="socials__item">
-                     <a href="#" target="_blank" class="socials__link">
+                     <a href="#" target="_blank" class="socials__link" aria-label="Linkedin">
                         <svg class="socials__icon" width="20" height="20">
                            <use href="./images/icons.svg#linkedin"></use>
                         </svg>
@@ -251,6 +390,8 @@
    
       </div>
    </footer>
+
+   <script src="./js/mobile-menu.js"></script>
 
 </body>
 </html>
