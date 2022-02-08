@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
-  // overflow-y: scroll;
+  overflow-y: scroll;
   transition: opacity, visibility;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-function);
