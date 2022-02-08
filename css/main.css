@@ -194,17 +194,18 @@ ul {
 }
 
 .mobile-menu {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   background-color: var(--primary-bg-color);
   padding: 48px 40px;
   z-index: 1;
+  overflow-y: scroll;
   transform: scale(1);
   transition: transform, opacity, visibility;
   transition-duration: var(--transition-duration);
