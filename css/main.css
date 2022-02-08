@@ -953,6 +953,12 @@ ul {
   margin-bottom: -15px;
 }
 
+@media screen and (min-width: 768px) {
+  .filter-buttons {
+    justify-content: center;
+  }
+}
+
 .filter-buttons__item {
   margin-right: 8px;
   margin-bottom: 15px;
