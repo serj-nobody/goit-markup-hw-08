@@ -10,9 +10,9 @@ body {
   letter-spacing: 0.03em;
   background-color: var(--white-color);
   color: var(--primary-text-color);
-  // &.modal-open {
-  //   overflow: hidden;
-  // }
+  &.modal-open {
+    overflow: hidden;
+  }
   &.menu-open {
     overflow: hidden;
   }
